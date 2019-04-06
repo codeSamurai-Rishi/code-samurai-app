@@ -10,10 +10,20 @@
 
     <table class="highlight">
         <tr>
-            <th>Song</th><th>Singer</th><th>Added By</th><th>Likes</th><th>Actions</th>
+            <th>Song Name</th><th>Artist</th><th>Album</th><th>link</th><th>Genre</th>Added By<th>Rate</th><th>Delete</th><th>Recommend</th>
         </tr>
 
-        <% items.forEach(function(item){  %>
+        <% items.forEach(function(item,index){  %>
+
+        <tr><td><%=item.songname%></td>
+            <td><%=item.artist%></td>
+            <td><%=item.album%></td>
+            <td><%=item.link%></td>
+            <td><%=item.genre%></td>
+            <td>Rate</td>
+            <td>Delete</td>
+            <td>delete</td>
+        </tr>
 
 
 

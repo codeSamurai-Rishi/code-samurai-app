@@ -65,6 +65,14 @@ function deleteAndSort (itemName, itemValue) {
     return (allItems);
 }
 
+function deleteSong (itemName, itemValue) {
+    var myItem = Item.chain().find({[itemName]:itemValue}).remove();
+    //var myItem = Item.chain().find({[songname]:itemValue}).remove();
+
+  //  var allItems = Item.chain().find().simplesort('likes').data().reverse();
+    return Item.find();
+}
+
 // save all information on add page
 function saveFormAndReturnAllItems (form) {
     Item.insert(form);
@@ -136,3 +144,12 @@ app.post('/saveitem', function (request, response) {
     response.render('listpage',{ items: items });
 });
 
+// when save button is clicked on add page
+app.get('/delete', function (request, response) {
+    console.log(request.body)
+    // hint #1: find the helper function that will help save the information first
+    // hint #2: make sure to send the list of items to the list page
+    var form = request.body
+    var items = deleteAndSort ("songname",request.query.songname);
+    response.render('listpage',{ items: items });
+});

@@ -31,6 +31,7 @@ function databaseInitialize() {
         User.insert({username:'darish',password:'darish'});
         User.insert({username:'coder',password:'coder'});
         User.insert({username:'mega',password:'mega'});
+        User.insert({username:'codeSamurai',password:'Coder11'});
 
 
 }

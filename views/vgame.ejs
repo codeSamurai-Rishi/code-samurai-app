@@ -1,0 +1,27 @@
+<!doctype.html>
+<html>
+    <head><%=include ./head%></head>
+    <body>
+        <% include ./header %>
+        <div class="card">
+
+    <form method="post" action="saveitem"/>
+    Game: <input type="text" name="gamename" required/>
+    Made By: <input type="text" name="artist" required/>
+    Platform: <input type="text" name="platform" required/>
+    Where To Buy It: <input type="text" name="store" required/>
+    Type Of Game: <input type="text" name="typeof" required/>
+
+
+
+
+
+        Added by: <input type="text" name="addedBy" value="<%=loginName%>" readonly/>
+
+        <button class="btn" type="submit" name="submit">Save Item</button>
+        <button class="btn" type="reset" name="reset">Clear</button>
+        <button class="btn" type="button" name="cancel" onclick="goback()">Cancel</button>
+
+    </form>
+    </body>
+</html>

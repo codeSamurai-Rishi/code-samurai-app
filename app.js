@@ -112,6 +112,8 @@ app.get('/', function (request, response) {
 app.get('/additem', function (request, response) {
     response.render('addpage',{loginName:request.session.user});
 });
+app.get('/addvgam', function (request, response) {
+    response.render('vgame',{loginName:request.session.user});
 
 
 

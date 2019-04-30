@@ -114,6 +114,7 @@ app.get('/additem', function (request, response) {
 });
 app.get('/addvgam', function (request, response) {
     response.render('vgame',{loginName:request.session.user});
+});
 
 
 

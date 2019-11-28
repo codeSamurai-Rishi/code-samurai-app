@@ -3,9 +3,10 @@
     <head><%=include ./head%></head>
     <body>
         <% include ./header %>
+        <header><% include ./header %></header>
         <div class="card">
 
-    <form method="post" action="saveitem"/>
+    <form method="post" action="saveitem">
     Game: <input type="text" name="gamename" required/>
     Made By: <input type="text" name="artist" required/>
     Platform: <input type="text" name="platform" required/>
@@ -22,6 +23,8 @@
         <button class="btn" type="reset" name="reset">Clear</button>
         <button class="btn" type="button" name="cancel" onclick="goback()">Cancel</button>
 
+
     </form>
+        </div>
     </body>
 </html>
